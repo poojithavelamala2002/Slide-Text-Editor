@@ -114,6 +114,7 @@ No backend or installation required
 
 ## screenshots
 
-![App Home Page](screenshots./homepage.png)
-![Add text on slide](screenshots./slide.png)
+![App Home Page](./screenshots/homepage.png)
+![Add text on slide](./screenshots/slide.png)
+
 
