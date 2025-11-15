@@ -1,4 +1,4 @@
-### Slide Text Editor
+# Slide Text Editor
 
 This project is a customizable image slider with draggable, editable text elements, designed as part of the Celebrare assignment.
 It allows users to add, move, edit, and style text directly on top of slider images.
