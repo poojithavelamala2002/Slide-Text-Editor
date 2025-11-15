@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Celebrare Slider Assignment — Slide Text Editor</title>
+
+  <!-- Local Swiper CSS (must be present in project root) -->
+  <link rel="stylesheet" href="swiper-bundle.min.css">
+
+  <!-- Your custom styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container" style="max-width:1100px; margin: 0 auto;">
+    <h1 style="font-size:20px; margin-bottom:12px;">Slide Text Editor</h1>
+
+    <p style="margin-top:0; margin-bottom:12px; color:#444; font-size:13px;">
+      Tip: Select a slide, click <strong>Add Text</strong> to place text on that slide. Click a text box to select it, drag to move it, double-click to edit inline, and use the controls to change size/color/font.
+    </p>
+
+    <!-- editor-row: controls left, slider right -->
+    <div class="editor-row">
+      <!-- controls (left) -->
+      <aside class="controls" role="region" aria-label="Text editor controls">
+        <label for="textInput">Text</label>
+        <input id="textInput" type="text" placeholder="Enter text" aria-label="Text to add or edit">
+
+        <label for="fontSize">Size</label>
+        <input id="fontSize" type="number" min="10" max="100" value="24" aria-label="Font size in pixels">
+
+        <label for="fontColor">Color</label>
+        <input id="fontColor" type="color" value="#000000" aria-label="Font color">
+
+        <label for="fontFamily">Font</label>
+        <select id="fontFamily" aria-label="Font family">
+          <option value="Arial">Arial</option>
+          <option value="Georgia">Georgia</option>
+          <option value="Verdana">Verdana</option>
+          <option value="Courier New">Courier New</option>
+        </select>
+
+        <div class="controls-actions">
+          <button id="addTextBtn" title="Add a new text box to the active slide">➕ Add Text</button>
+          <button id="applyBtn" title="Apply control values to the selected text">Apply</button>
+          <button id="deselectBtn" title="Deselect current text">Deselect</button>
+        </div>
+      </aside>
+
+      <!-- editor stage (right) -->
+      <section class="editor-stage">
+        <!-- Swiper slider: 3 portrait slides (9:16). Keep images in /images folder. -->
+        <div class="swiper mySwiper" aria-label="Image slider" role="region">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="Slide 1">
+              <img src="images/img1.png" alt="Slide 1 image" class="slide-image">
+            </div>
+
+            <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="Slide 2">
+              <img src="images/img2.png" alt="Slide 2 image" class="slide-image">
+            </div>
+
+            <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="Slide 3">
+              <img src="images/img3.png" alt="Slide 3 image" class="slide-image">
+            </div>
+          </div>
+
+          <!-- navigation -->
+          <button class="swiper-button-prev" aria-label="Previous slide"></button>
+          <button class="swiper-button-next" aria-label="Next slide"></button>
+        </div>
+      </section>
+    </div>
+
+    <p style="font-size:12px;color:#666;margin-top:10px;">
+      Note: Ensure <code>swiper-bundle.min.css</code> and <code>swiper-bundle.min.js</code> are present in the project root, and that <code>script.js</code> is loaded after Swiper.
+    </p>
+  </main>
+
+  <!-- Swiper JS (local file in project root) -->
+  <script src="swiper-bundle.min.js"></script>
+
+  <!-- Your feature script (must be after Swiper) -->
+  <script src="script.js"></script>
+</body>
+</html>
